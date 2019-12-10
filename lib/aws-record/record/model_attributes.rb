@@ -25,7 +25,7 @@ module Aws
       end
 
       def keys
-        @keys ||= attributes.keys
+        attributes.keys
       end
 
       def register_attribute(name, marshaler, opts)
