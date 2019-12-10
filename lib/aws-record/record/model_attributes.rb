@@ -24,6 +24,10 @@ module Aws
         @storage_attributes = {}
       end
 
+      def keys
+        @keys ||= attributes.keys
+      end
+
       def register_attribute(name, marshaler, opts)
         attribute = Attribute.new(name, opts.merge(marshaler: marshaler))
         _new_attr_validation(name, attribute)
